@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Sentiment Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        input, button { padding: 10px; font-size: 16px; }
+        .result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Stock Sentiment Analysis</h1>
+    <form method="POST">
+        <label for="text">Enter your text:</label><br><br>
+        <input type="text" id="text" name="text" size="50" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if sentiment is defined %}
+        <div class="result">
+            Sentiment: {{ sentiment }}
+        </div>
+    {% endif %}
+</body>
+</html>
